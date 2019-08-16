@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en"
+      style="height: 100%">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color"
+          content="#000000">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta http-equiv="Cache-Control"
+          content="no-transform" />
+    <meta http-equiv="Cache-Control"
+          content="no-siteapp" />
+    <!--WebApp全屏模式   隐藏地址栏-->
+    <meta name="apple-mobile-web-app-capable"
+          content="yes" />
+    <meta name="format-detection"
+          content="telephone=no" />
+    <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 自动将http资源升级为https-->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+    <title>鹰眼鉴房，理性决策，质选优房</title>
+    <meta name="keywords"
+          content="鹰眼鉴房，鹰眼，新房，二手房，房产质量，房产数据服务平台，专注楼盘质量，房产大数据" />
+    <meta name="description"
+          content="鹰眼鉴房，国内首家专注于楼盘质量的房产数据信息服务平台，在全方位房产质量大数据支持下，协助更多购房人更加轻松、便捷地甄选优质房产。" />
+    <meta id='rem'
+          name="copyright"
+          content="北京买家帮网络信息有限公司">
+    <meta http-equiv="Content-Security-Policy"
+          content="upgrade-insecure-requests">
+    <link rel="icon"
+          href="favicon.ico"
+          type="image/x-icon">
+    <script>
+        (function setFontsize() {
+            var designWidth = 750,
+                designFontSize = 100,
+                win_width = 0;
+            if (window.screen.width > 750) {
+                win_width = 750;
+            } else {
+                win_width = window.screen.width;
+            }
+            var scale = win_width / designWidth;
+            var root_font_size = ((scale * 10000 * designFontSize) / 10000)
+                .toFixed(4);
+            document.documentElement.style.fontSize = root_font_size + 'px';
+            window.addEventListener('resize', function () {
+                setFontsize();
+            });
+        })();
+    </script>
+    <!--<link rel = "shortcut icon" href = "./images/favicon.png">-->
+    <link rel="stylesheet"
+          href="./css/appdown.css">
+</head>
+
+<body>
+    <section id="g-moban"
+             class="g-moban">
+        <section class="loading">
+            <img src="./img/loading.gif"
+                 alt="">
+        </section>
+    </section>
+    <section id="m-conatiner"
+             class="m-conatiner">
+        <section style="display:none"
+                 id="g-wx"
+                 class="g-wx u-wx">
+            <section class="g-Installed g-Installed-right">
+                <span>已安装</span>
+                <p style="letter-spacing: 0"
+                   class="threeIcon">请点击右上角更多</p>
+                <p>选择在浏览器中打开</p>
+            </section>
+        </section>
+        <section style="display:none"
+                 id="g-web"
+                 class="g-web u-web">
+            <i class="animateIcon">
+                <img src="./img/icon_xiala.png"
+                     alt="">
+            </i>
+            <section class="g-web-1">
+                <p>若已安装鹰眼鉴房</p>
+                <p>请下拉页面点击“打开”</p>
+            </section>
+            <hr>
+        </section>
+        <section id="shouji"
+                 class="g-shouji-coniner">
+            <section class="nodownConiner">
+                <section class="g-Installed u-wx nodown">
+                    <span>未安装</span>
+                    <p>还没有安装鹰眼鉴房APP的</p>
+                    <p>小伙伴们，快来下载～</p>
+                </section>
+                <section style="text-align:center"
+                         class="g-web-1 u-web nodown">
+                    <p>还没有安装鹰眼鉴房APP的</p>
+                    <p>小伙伴们，快来下载～</p>
+                </section>
+            </section>
+            <section style="display:none"
+                     class="g-shouji g-shouji-wb u-web">
+                <img src="./img/liulanqi_shoujixiugai.png"
+                     alt="">
+            </section>
+            <section style="display:none"
+                     class="g-shouji g-shouji-wx u-wx">
+                <img src="./img/weixin_shoujixiugai.png"
+                     alt="">
+            </section>
+        </section>
+        <footer>
+            <section id="g-down"
+                     class="footerBtn">
+                <span>立即下载</span>
+            </section>
+        </footer>
+    </section>
+    <script src="./vender/http.js"></script>
+    <script src="./vender/appdown.js"></script>
+    <script>
+        document.ready = function (callback) {
+            ///兼容FF,Google
+            if (document.addEventListener) {
+                document.addEventListener('DOMContentLoaded', function () {
+                    document.removeEventListener('DOMContentLoaded', arguments.callee, false);
+                    callback();
+                }, false)
+            }
+            //兼容IE
+            else if (document.attachEvent) {
+                document.attachEvent('onreadystatechange', function () {
+                    if (document.readyState == "complete") {
+                        document.detachEvent("onreadystatechange", arguments.callee);
+                        callback();
+                    }
+                })
+            } else if (document.lastChild == document.body) {
+                callback();
+            }
+        }
+        document.ready(function () {
+            let open = new OpenApp();
+            open.init();
+        });
+    </script>
+</body>
+
+</html>
